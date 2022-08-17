@@ -15,6 +15,9 @@ const SideBar = () => {
       <Link href={'/basket'}>
         <a>basket</a>
       </Link>
+      <Link href={'/about'}>
+        <a>about</a>
+      </Link>
     </div>
   );
 };
