@@ -1,8 +1,8 @@
-import supabase from '../db/supabase';
 import Card from '../components/card/Card';
+import { loadDrinks } from '../lib/load-food';
 
 export async function getStaticProps() {
-  let { data: drinks } = await supabase.from('drinks').select('*');
+  const drinks = await loadDrinks();
 
   return { props: { drinks } };
 }
