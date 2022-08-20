@@ -10,7 +10,6 @@ export async function getStaticProps() {
 export default function Basket({ other }) {
   return (
     <>
-      <h1>take a break</h1>
       <div className="card-box">
         {other.map((i) => {
           return <Card key={i.id} title={i.title} text={i.text} />;
