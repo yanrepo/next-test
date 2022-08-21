@@ -1,5 +1,4 @@
 .card {
-  margin: 0.5rem;
   padding: 1rem;
   background-color: aliceblue;
   border-radius: 0.5rem;
@@ -8,22 +7,26 @@
   flex-direction: column;
   width: 23rem;
 }
+
 .cardImg {
   max-width: 100%;
   height: 19rem;
 }
+
 .cardTitle {
   margin: 0.5rem 0 0.5rem 0;
   font-size: 1.15rem;
   font-weight: bold;
   border-bottom: 0.15rem dotted #00000080;
 }
+
 .cardText {
   margin: 0;
   height: 5rem;
   font-size: 1rem;
   overflow-y: scroll;
 }
+
 .cardCounter {
   padding-top: 1rem;
   width: 100%;
