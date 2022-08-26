@@ -13,7 +13,7 @@ const SideBar = () => {
         <a>drinks</a>
       </Link>
       <Link href={'/basket'}>
-        <a>basket</a>
+        <a style={{ color: 'var(--orange)' }}>basket</a>
       </Link>
     </div>
   );
