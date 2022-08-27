@@ -1,19 +1,20 @@
 import Link from 'next/link';
+import css from './SideBar.module.css';
 
 const SideBar = () => {
   return (
-    <div className="sidebar">
+    <div className={css.sidebar}>
       <Link href={'/'}>
-        <a>home</a>
+        <a className={css.aLink}>home</a>
       </Link>
       <Link href={'/food'}>
-        <a>food</a>
+        <a className={css.aLink}>food</a>
       </Link>
       <Link href={'/drinks'}>
-        <a>drinks</a>
+        <a className={css.aLink}>drinks</a>
       </Link>
       <Link href={'/basket'}>
-        <a style={{ color: 'var(--orange)' }}>basket</a>
+        <a className={css.basketLink}>basket</a>
       </Link>
     </div>
   );

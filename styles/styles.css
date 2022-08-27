@@ -43,30 +43,3 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
 }
-
-.sidebar {
-  width: 100vw;
-  height: auto;
-  background-color: var(--black);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.sidebar > a {
-  margin: 0.5rem;
-  padding: 0.8rem;
-  width: 5rem;
-  color: var(--white);
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.15s ease;
-  border-radius: 8px;
-}
-.sidebar > a:hover,
-.sidebar > a:focus,
-.sidebar > a:active {
-  background-color: var(--green);
-  color: var(--black);
-}
