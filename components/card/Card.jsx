@@ -1,6 +1,7 @@
 import css from './Card.module.css';
 import Image from 'next/image';
 import img from '../../public/images/food-1920-1280.jpg';
+import { Counter } from './Counter/Counter';
 
 const Card = (i) => {
   return (
@@ -15,7 +16,7 @@ const Card = (i) => {
       />
       <h5 className={css.cardTitle}>{i.title}</h5>
       <p className={css.cardText}>{i.text}</p>
-      <div className={css.cardCounter}>/ COUNTER</div>
+      <Counter i={i.price} />
     </div>
   );
 };
