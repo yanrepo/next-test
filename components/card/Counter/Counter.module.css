@@ -1,0 +1,34 @@
+.fooBox {
+  padding-top: 1rem;
+  width: 96%;
+  display: flex;
+  flex-flow: row, wrap;
+  justify-content: space-between;
+}
+
+.price {
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.input {
+  margin-inline: 0.15rem;
+  width: 2rem;
+  border-radius: 5px;
+  border-color: var(--blue);
+  text-align: center;
+}
+
+.button {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 20px;
+  border-color: var(--blue);
+}
+
+.button:hover,
+.button:active {
+  background-color: var(--blue);
+  color: var(--white);
+}
