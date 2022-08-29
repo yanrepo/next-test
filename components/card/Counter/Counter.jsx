@@ -10,7 +10,7 @@ export const Counter = ({ price }) => {
 
   return (
     <div className={css.fooBox}>
-      <p className={css.price}>{price}</p>
+      <div className={css.price}>${price}</div>
       <div className={css.counter}>
         <button className={css.button} onClick={decrement}>
           -

@@ -16,7 +16,7 @@ const Card = (i) => {
       />
       <h5 className={css.cardTitle}>{i.title}</h5>
       <p className={css.cardText}>{i.text}</p>
-      <Counter i={i.price} />
+      <Counter price={i.price} />
     </div>
   );
 };

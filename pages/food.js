@@ -12,7 +12,14 @@ export default function Food({ food }) {
     <>
       <div className="card-box">
         {food.map((i) => {
-          return <Card key={i.id} title={i.title} text={i.text} />;
+          return (
+            <Card
+              key={i.id}
+              title={i.title}
+              text={i.text}
+              price={i.price}
+            />
+          );
         })}
       </div>
     </>
