@@ -1,6 +1,6 @@
 import css from './Card.module.css';
 import Image from 'next/image';
-import img from '../../public/images/food-1920-1280.jpg';
+import img from '../../public/images/alexandra-tran-unsplash.png';
 import { Counter } from './Counter/Counter';
 
 const Card = (i) => {
@@ -10,8 +10,8 @@ const Card = (i) => {
         className={css.cardImg}
         src={img}
         layout="intrinsic"
-        width={320}
-        height={240}
+        width={500}
+        height={500}
         alt="image"
       />
       <h5 className={css.cardTitle}>{i.title}</h5>
