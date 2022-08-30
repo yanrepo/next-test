@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import css from './SideBar.module.css';
+import css from './NavBar.module.css';
 
-const SideBar = () => {
+const NavBar = () => {
   return (
-    <div className={css.sidebar}>
+    <div className={css.navbar}>
       <Link href={'/'}>
         <a className={css.aLink}>home</a>
       </Link>
@@ -20,4 +20,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default NavBar;

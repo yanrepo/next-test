@@ -1,4 +1,4 @@
-import SideBar from './navBar/SideBar';
+import SideBar from './navBar/NavBar';
 
 //
 //EMPTY DIV-WRAPPER FOR EMPTY FOOTER
@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <div className="layout">
       <div>
-        <SideBar />
+        <NavBar />
         <div className="main">{children}</div>
         <footer />
       </div>
