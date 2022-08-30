@@ -1,4 +1,4 @@
-import SideBar from './navBar/NavBar';
+import NavBar from './navBar/NavBar';
 
 //
 //EMPTY DIV-WRAPPER FOR EMPTY FOOTER
