@@ -1,5 +1,5 @@
-import Card from '../components/card/Card';
-import { loadDrinks } from '../lib/load-food';
+import Card from '../../components/card/Card';
+import { loadDrinks } from '../../lib/load-food';
 
 export async function getStaticProps() {
   const drinks = await loadDrinks();
