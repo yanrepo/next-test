@@ -1,3 +1,5 @@
+import BasketCard from '../components/basket/BasketCard';
+
 export default function Basket() {
-  return <div className="basket"></div>;
+  return <BasketCard />;
 }

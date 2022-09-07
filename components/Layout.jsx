@@ -1,4 +1,5 @@
 import NavBar from './navBar/NavBar';
+import { BasketContextProvider } from '../context/BasketContext';
 
 //
 //EMPTY DIV-WRAPPER FOR EMPTY FOOTER
@@ -8,7 +9,9 @@ const Layout = ({ children }) => {
     <div className="layout">
       <div>
         <NavBar />
-        <div className="main">{children}</div>
+        <BasketContextProvider>
+          <div className="main">{children}</div>
+        </BasketContextProvider>
         <footer />
       </div>
     </div>
