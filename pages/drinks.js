@@ -7,7 +7,7 @@ export async function getStaticProps() {
   return { props: { drinks } };
 }
 
-export default function Home({ drinks }) {
+export default function Drinks({ drinks }) {
   return (
     <>
       <div className="card-box">
