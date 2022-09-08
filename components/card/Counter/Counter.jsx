@@ -13,21 +13,17 @@ export const Counter = (props) => {
     <div className={css.fooBox}>
       <div className={css.price}>${price}</div>
       <div className={css.counter}>
-        <button
-          className={css.button}
-          onClick={decrement}
-          children="-"
-        />
+        <button className={css.button} onClick={decrement}>
+          -
+        </button>
         <input
           className={css.input}
           value={amount}
           onChange={countHandler}
         />
-        <button
-          className={css.button}
-          onClick={increment}
-          children="+"
-        />
+        <button className={css.button} onClick={increment}>
+          +
+        </button>
       </div>
     </div>
   );
