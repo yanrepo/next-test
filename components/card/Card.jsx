@@ -1,7 +1,7 @@
 import css from './Card.module.css';
 import Image from 'next/image';
 import img from '../../public/images/alexandra-tran-unsplash.png';
-import { Counter } from './Counter/Counter';
+import { Counter } from './counter/Counter';
 import { useState, useContext } from 'react';
 import BasketContext from '../../context/BasketContext';
 
