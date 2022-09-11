@@ -1,5 +1,5 @@
 import NavBar from './navBar/NavBar';
-import { BasketContextProvider } from '../context/BasketContext';
+import { BasketContextProvider } from './basket/BasketContext';
 
 //
 //EMPTY DIV-WRAPPER FOR EMPTY FOOTER

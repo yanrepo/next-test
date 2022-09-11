@@ -1,20 +1,19 @@
 import css from './Card.module.css';
 import Image from 'next/image';
 import img from '../../public/images/alexandra-tran-unsplash.png';
-import { Counter } from './counter/Counter';
-import { useState, useContext } from 'react';
-import BasketContext from '../../context/BasketContext';
+import useBasket from '../basket/BasketContext';
 
 const Card = (i) => {
-  const [amount, setAmount] = useState(1);
-  const { addToBasket } = useContext(BasketContext);
+  const { addToBasket } = useBasket();
+
+  const handleClick = () => {
+    const { title, price } = i;
+    const product = { title, price };
+    addToBasket(product);
+  };
 
   return (
-    <div
-      className={css.card}
-      key={i.id}
-      onClick={() => addToBasket(i.title, i.price)}
-    >
+    <div className={css.card} key={i.id} onClick={handleClick}>
       <Image
         className={css.cardImg}
         src={img}
@@ -23,13 +22,10 @@ const Card = (i) => {
         height={500}
         alt="image"
       />
-      <h5 className={css.cardTitle}>{i.title}</h5>
+      <h5 className={css.cardTitle}>
+        {i.title} - ${i.price}
+      </h5>
       <p className={css.cardText}>{i.text}</p>
-      <Counter
-        price={i.price}
-        amount={amount}
-        setAmount={setAmount}
-      />
     </div>
   );
 };

@@ -1,17 +1,16 @@
 import css from './BasketCard.module.css';
-import { useContext } from 'react';
-import BasketContext from '../../context/BasketContext';
+import useBasket from './BasketContext';
 
 const BasketCard = () => {
-  const { items } = useContext(BasketContext);
+  const { total, products } = useBasket();
 
   return (
     <div className={css.box}>
-      <h1>Amount: {items.length}</h1>
+      <h1>Amount: ${total}</h1>
       <ul>
-        {items.map((i) => (
-          <li key={i.title + i.price}>
-            {i.title}: ${i.price}
+        {products.map((product, index) => (
+          <li key={index}>
+            {product.title}: ${product.price}
           </li>
         ))}
       </ul>
