@@ -20,9 +20,9 @@ export const BasketContextProvider = ({ children }) => {
     updateTotal(newState);
   };
 
-  const updateTotal = () => {
-    let total = 0;
-    state.products.forEach((product) => (total += product.price));
+  const updateTotal = (newState) => {
+    const total = 0;
+    newState.forEach((product) => (total += product.price));
     dispatch({ type: 'TOTAL', payload: { total } });
   };
 
