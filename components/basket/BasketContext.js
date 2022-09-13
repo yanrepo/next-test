@@ -1,5 +1,20 @@
 import { createContext, useContext, useReducer } from 'react';
-import basketReducer, { initialState } from './basketReducer';
+
+const initialState = { total: 0, products: [] };
+
+const basketReducer = (state, action) => {
+  const { type, payload } = action;
+  switch (type) {
+    case 'ADD':
+      return { ...state, products: payload.products };
+    case 'REMOVE':
+      return { ...state, products: payload.products };
+    case 'TOTAL':
+      return { ...state, total: payload.total };
+    default:
+      throw new Error(`${type} type not exist.`);
+  }
+};
 
 const BasketContext = createContext(initialState);
 
