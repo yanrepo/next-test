@@ -3,3 +3,25 @@
   border: 2px solid var(--orange);
   border-radius: 1rem;
 }
+
+.ul {
+  list-style: none;
+  padding-left: 0;
+}
+.li {
+  margin-top: 0.5rem;
+}
+
+.remove {
+  margin-inline-end: 0.5rem;
+  background-color: var(--red);
+  color: var(--white);
+  font-weight: 900;
+  width: 1.7rem;
+  height: 1.7rem;
+  border: 0;
+  border-radius: 100%;
+}
+.remove:hover {
+  cursor: pointer;
+}
