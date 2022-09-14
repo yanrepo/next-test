@@ -22,14 +22,18 @@ export const BasketContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(basketReducer, initialState);
 
   const addToBasket = (product) => {
-    const newState = state.products.concat(product);
+    const newState = state.products.concat({
+      id: state.products.length,
+      title: product.title,
+      price: product.price,
+    });
     dispatch({ type: 'ADD', payload: { products: newState } });
     updateTotal(newState);
   };
 
-  const removeFromBasket = (product) => {
+  const removeFromBasket = (e) => {
     const newState = state.products.filter(
-      (current) => current.title !== product.title
+      (current) => current.id !== parseInt(e.target.name, 10)
     );
     dispatch({ type: 'REMOVE', payload: { products: newState } });
     updateTotal(newState);
