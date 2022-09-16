@@ -1,14 +1,14 @@
 import css from './Card.module.css';
 import Image from 'next/image';
-import img from '../../public/images/alexandra-tran-unsplash.png';
+//import img from '../../public/images/alexandra-tran-unsplash.png';
+import img from '../../public/images/daniel-jankovic-unsplash.png';
 import useBasket from '../basket/BasketContext';
 
 const Card = (i) => {
   const { addToBasket } = useBasket();
 
   const handleClick = () => {
-    const { title, price } = i;
-    const product = { title, price };
+    const product = { title: i.title, price: i.price };
     addToBasket(product);
   };
 
