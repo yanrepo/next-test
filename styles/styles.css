@@ -36,7 +36,7 @@ body {
   justify-content: center;
 }
 .card-box {
-  max-width: 54rem;
+  max-width: 69rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
