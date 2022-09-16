@@ -6,7 +6,7 @@
   box-shadow: 0 2px 5px 0 #00000029, 0 2px 10px 0 #0000001f;
   display: flex;
   flex-direction: column;
-  width: 17rem;
+  flex-basis: 31%;
 }
 .card:hover {
   border: 2px dotted var(--black);
