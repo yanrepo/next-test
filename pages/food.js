@@ -10,7 +10,7 @@ export default function Food({ food }) {
   return (
     <div className="card-box">
       {food.map((i) => (
-        <Card i={i} />
+        <Card key={i.id} i={i} />
       ))}
     </div>
   );

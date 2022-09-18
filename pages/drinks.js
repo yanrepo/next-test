@@ -10,7 +10,7 @@ export default function Drinks({ drinks }) {
   return (
     <div className="card-box">
       {drinks.map((i) => (
-        <Card i={i} />
+        <Card key={i.id} i={i} />
       ))}
     </div>
   );
