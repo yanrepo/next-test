@@ -1,27 +1,17 @@
 import Card from '../components/card/Card';
-import { loadDrinks } from '../lib/load-food';
+import { loadDrinks } from '../lib/loadfood';
 
 export async function getStaticProps() {
   const drinks = await loadDrinks();
-
   return { props: { drinks } };
 }
 
 export default function Drinks({ drinks }) {
   return (
-    <>
-      <div className="card-box">
-        {drinks.map((i) => {
-          return (
-            <Card
-              key={i.id}
-              title={i.title}
-              text={i.text}
-              price={i.price}
-            />
-          );
-        })}
-      </div>
-    </>
+    <div className="card-box">
+      {drinks.map((i) => (
+        <Card i={i} />
+      ))}
+    </div>
   );
 }

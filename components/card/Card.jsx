@@ -4,7 +4,7 @@ import Image from 'next/image';
 import img from '../../public/images/daniel-jankovic-unsplash.png';
 import useBasket from '../basket/BasketContext';
 
-const Card = (i) => {
+const Card = ({ i }) => {
   const { addToBasket } = useBasket();
 
   const handleClick = () => {
