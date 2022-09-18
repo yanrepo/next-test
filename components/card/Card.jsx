@@ -1,7 +1,7 @@
 import css from './Card.module.css';
 import Image from 'next/image';
-//import img from '../../public/images/alexandra-tran-unsplash.png';
-import img from '../../public/images/daniel-jankovic-unsplash.png';
+import imgFood from '../../public/images/alexandra-tran-unsplash.png';
+import imgDrinks from '../../public/images/daniel-jankovic-unsplash.png';
 import useBasket from '../basket/BasketContext';
 
 const Card = ({ i }) => {
@@ -16,7 +16,7 @@ const Card = ({ i }) => {
     <div className={css.card} key={i.id} onClick={handleClick}>
       <Image
         className={css.cardImg}
-        src={img}
+        src={i.type === 'food' ? imgFood : imgDrinks}
         layout="intrinsic"
         width={500}
         height={500}
