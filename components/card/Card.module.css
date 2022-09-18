@@ -1,20 +1,16 @@
 .card {
   margin: 0.5rem;
-  padding: 1rem;
+  padding: 0.8rem;
   background-color: aliceblue;
   border-radius: 0.5rem;
   box-shadow: 0 2px 5px 0 #00000029, 0 2px 10px 0 #0000001f;
   display: flex;
-  flex-direction: column;
-  flex: 1 1 30%;
+  flex-flow: column;
+  flex: 1 1 31%;
+  min-width: 12.5rem;
 }
 .card:hover {
   border: 2px dotted var(--black);
-}
-
-.cardImg {
-  max-width: 100%;
-  height: auto;
 }
 
 .cardTitle {
