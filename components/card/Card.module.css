@@ -7,10 +7,10 @@
   display: flex;
   flex-flow: column;
   flex: 1 1 31%;
-  min-width: 12.5rem;
+  min-width: 8rem;
 }
 .card:hover {
-  border: 2px dotted var(--black);
+  border: 0.125rem dotted var(--black);
 }
 
 .cardTitle {
