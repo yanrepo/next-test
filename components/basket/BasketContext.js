@@ -22,26 +22,20 @@ export const BasketContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(basketReducer, initialState);
 
   const addToBasket = (i) => {
-    const existSome = state.products.some((product) => {
-      if (product.id === i.id) {
-        return true;
-      } else return false;
-    });
-    if (existSome === true) {
-      const added = state.products.map((product) => {
-        if (product.id === i.id) {
-          let updateAmout = product.amount + 1;
-          return { ...product, amount: updateAmout };
-        }
-        return product;
-      });
-      dispatch({ type: 'ADD', payload: { products: added } });
-      updateTotal(added);
-    } else {
-      const added = state.products.concat({ ...i });
-      dispatch({ type: 'ADD', payload: { products: added } });
-      updateTotal(added);
-    }
+    const added = [];
+    const existSome = state.products.some((product) =>
+      product.id === i.id ? true : false
+    );
+    if (existSome)
+      added = state.products.map((product) =>
+        product.id === i.id
+          ? { ...product, amount: product.amount + 1 }
+          : product
+      );
+    else added = state.products.concat({ ...i });
+
+    dispatch({ type: 'ADD', payload: { products: added } });
+    updateTotal(added);
   };
 
   const removeFromBasket = (e) => {
@@ -54,9 +48,9 @@ export const BasketContextProvider = ({ children }) => {
 
   const updateTotal = (added) => {
     const total = 0;
-    added.map((product) => {
-      return (total += product.price * product.amount);
-    });
+    added.map(
+      (product) => (total += product.price * product.amount)
+    );
     dispatch({ type: 'TOTAL', payload: { total } });
   };
 
