@@ -4,6 +4,8 @@ import useBasket from './BasketContext';
 const BasketCard = () => {
   const { total, products, removeFromBasket } = useBasket();
 
+  console.log('basketCard products', products);
+
   return (
     <div className={css.box}>
       <h1>Amount: ${total}</h1>
@@ -12,12 +14,12 @@ const BasketCard = () => {
           <li className={css.li} key={product.id}>
             <button
               className={css.remove}
-              onClick={removeFromBasket}
               name={product.id}
+              onClick={removeFromBasket}
             >
               X
             </button>
-            {product.title}: ${product.price}
+            {`${product.title}: x${product.amount} = $${product.price} `}
           </li>
         ))}
       </ul>

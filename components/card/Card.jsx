@@ -3,29 +3,34 @@ import Link from 'next/link';
 import Image from 'next/image';
 import imgFood from '../../public/images/alexandra-tran-unsplash.png';
 import imgDrinks from '../../public/images/daniel-jankovic-unsplash.png';
-//import useBasket from '../basket/BasketContext';
+import useBasket from '../basket/BasketContext';
 
 const Card = ({ i }) => {
-  //const { toggleBasket } = useBasket();
-  const { id, type, title, price, text } = i;
+  const { addToBasket } = useBasket();
+  const handleClick = (e) => {
+    e.preventDefault();
+    addToBasket(i);
+  };
 
   return (
-    <Link href={`/${id}`} key={id}>
-      <a className={css.card}>
-        <Image
-          className={css.cardImg}
-          src={type === 'food' ? imgFood : imgDrinks}
-          layout="intrinsic"
-          width={500}
-          height={500}
-          alt="image"
-        />
-        <h5 className={css.cardTitle}>
-          {title} - ${price}
-        </h5>
-        <p className={css.cardText}>{text}</p>
-      </a>
-    </Link>
+    <div className={css.card}>
+      <Link href={`/${i.id}`}>
+        <a className={css.a}>
+          <Image
+            className={css.cardImg}
+            src={i.type === 'food' ? imgFood : imgDrinks}
+            layout="intrinsic"
+            width={500}
+            height={500}
+            alt="image"
+          />
+        </a>
+      </Link>
+      <h5 className={css.cardTitle}>
+        {i.title} - ${i.price}
+      </h5>
+      <button onClick={handleClick}>Add to basket</button>
+    </div>
   );
 };
 
