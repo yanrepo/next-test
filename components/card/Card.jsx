@@ -3,15 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import imgFood from '../../public/images/alexandra-tran-unsplash.png';
 import imgDrinks from '../../public/images/daniel-jankovic-unsplash.png';
-import useBasket from '../basket/BasketContext';
+import AddRemoveButton from './button/AddRemoveButton';
 
 const Card = ({ i }) => {
-  const { addToBasket } = useBasket();
-  const handleClick = (e) => {
-    e.preventDefault();
-    addToBasket(i);
-  };
-
   return (
     <div className={css.card}>
       <Link href={`/${i.id}`}>
@@ -29,7 +23,7 @@ const Card = ({ i }) => {
       <h5 className={css.cardTitle}>
         {i.title} - ${i.price}
       </h5>
-      <button onClick={handleClick}>Add to basket</button>
+      <AddRemoveButton i={i} />
     </div>
   );
 };
