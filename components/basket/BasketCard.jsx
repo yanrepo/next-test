@@ -34,8 +34,12 @@ const BasketCard = () => {
             </button>
             {`${i.title}: x${i.amount} = $${i.price} `}
             <div className={css.buttons}>
-              <button name={i.id} onClick={dec} children="-" />
-              <button name={i.id} onClick={inc} children="+" />
+              <button name={i.id} onClick={dec}>
+                -
+              </button>
+              <button name={i.id} onClick={inc}>
+                +
+              </button>
             </div>
           </li>
         ))}

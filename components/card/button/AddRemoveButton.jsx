@@ -14,7 +14,7 @@ const AddRemoveButton = ({ i }) => {
     products.some((product) => product.id === i.id)
       ? setState(true)
       : setState(false);
-  }, [products]);
+  }, [products, i.id]);
 
   return (
     <button name={i.id} onClick={handleClick}>
