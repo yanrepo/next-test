@@ -46,6 +46,31 @@ export const BasketContextProvider = ({ children }) => {
     updateTotal(added);
   };
 
+  const increament = (e) => {
+    const added = state.products.map((product) =>
+      product.id === parseInt(e.target.name, 10)
+        ? { ...product, amount: product.amount + 1 }
+        : product
+    );
+    console.log(added);
+    dispatch({ type: 'ADD', payload: { products: added } });
+    updateTotal(added);
+  };
+
+  const decreament = (e) => {
+    const added = state.products.map((product) =>
+      product.id === parseInt(e.target.name, 10)
+        ? {
+            ...product,
+            amount: product.amount > 0 ? product.amount - 1 : 0,
+          }
+        : product
+    );
+    console.log(added);
+    dispatch({ type: 'ADD', payload: { products: added } });
+    updateTotal(added);
+  };
+
   const updateTotal = (added) => {
     const total = 0;
     added.map(
@@ -59,6 +84,8 @@ export const BasketContextProvider = ({ children }) => {
     products: state.products,
     addToBasket,
     removeFromBasket,
+    increament,
+    decreament,
   };
 
   return (
