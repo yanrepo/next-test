@@ -12,10 +12,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const oneItem = await loadOneItem(params);
-  const item = oneItem[0];
-  return { props: { item } };
+  const i = oneItem[0];
+  return { props: { i } };
 }
 
-export default function DynamicPage({ item }) {
-  return <CardPage item={item} />;
+export default function DynamicPage({ i }) {
+  return <CardPage i={i} />;
 }
