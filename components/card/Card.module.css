@@ -8,6 +8,7 @@
   flex-flow: column;
   flex: 1 1 31%;
   min-width: 8rem;
+  max-width: fit-content;
 }
 .card:hover {
   border: 0.125rem dotted var(--black);
