@@ -21,19 +21,8 @@ const BasketContext = createContext(initialState);
 export const BasketContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(basketReducer, initialState);
 
-  const addToBasket = (i) => {
-    const added = [];
-    const existSome = state.products.some((product) =>
-      product.id === i.id ? true : false
-    );
-    if (existSome)
-      added = state.products.map((product) =>
-        product.id === i.id
-          ? { ...product, amount: product.amount + 1 }
-          : product
-      );
-    else added = state.products.concat({ ...i });
-
+  const addCardToBasket = (i) => {
+    const added = state.products.concat({ ...i });
     dispatch({ type: 'ADD', payload: { products: added } });
     updateTotal(added);
   };
@@ -52,7 +41,6 @@ export const BasketContextProvider = ({ children }) => {
         ? { ...product, amount: product.amount + 1 }
         : product
     );
-    console.log(added);
     dispatch({ type: 'ADD', payload: { products: added } });
     updateTotal(added);
   };
@@ -66,7 +54,6 @@ export const BasketContextProvider = ({ children }) => {
           }
         : product
     );
-    console.log(added);
     dispatch({ type: 'ADD', payload: { products: added } });
     updateTotal(added);
   };
@@ -82,7 +69,7 @@ export const BasketContextProvider = ({ children }) => {
   const value = {
     total: state.total,
     products: state.products,
-    addToBasket,
+    addCardToBasket,
     removeFromBasket,
     increament,
     decreament,

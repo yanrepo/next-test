@@ -2,12 +2,13 @@ import useBasket from '../../basket/BasketContext';
 import { useState, useEffect } from 'react';
 
 const AddRemoveButton = ({ i }) => {
-  const { products, addToBasket, removeFromBasket } = useBasket();
+  const { products, addCardToBasket, removeFromBasket } =
+    useBasket();
   const [state, setState] = useState(false);
 
   const handleClick = (e) => {
     e.preventDefault();
-    state ? removeFromBasket(e) : addToBasket(i);
+    state ? removeFromBasket(e) : addCardToBasket(i);
   };
 
   useEffect(() => {
