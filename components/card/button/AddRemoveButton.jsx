@@ -18,8 +18,12 @@ const AddRemoveButton = ({ i }) => {
   }, [products, i.id]);
 
   return (
-    <button name={i.id} onClick={handleClick}>
-      {state ? 'Remove from basket' : 'Add to basket'}
+    <button
+      style={{ height: '2rem' }}
+      name={i.id}
+      onClick={handleClick}
+    >
+      {state ? 'Remove' : 'Add to basket'}
     </button>
   );
 };

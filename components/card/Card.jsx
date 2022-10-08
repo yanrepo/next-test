@@ -11,7 +11,6 @@ const Card = ({ i }) => {
       <Link href={`/${i.id}`}>
         <a className={css.a}>
           <Image
-            className={css.cardImg}
             src={i.type === 'food' ? imgFood : imgDrinks}
             layout="intrinsic"
             width={500}

@@ -37,8 +37,6 @@ body {
   justify-content: center;
 }
 .card-box {
-  max-width: 69rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
