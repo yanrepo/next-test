@@ -1,6 +1,6 @@
 import css from './Layout.module.css';
-import MainMenu from './mainMenu/MainMenu';
-import { BasketContextProvider } from './basket/BasketContext';
+import MainMenu from '../mainMenu/MainMenu';
+import { BasketContextProvider } from '../basket/BasketContext';
 
 const Layout = ({ children }) => {
   return (
