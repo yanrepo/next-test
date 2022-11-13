@@ -1,8 +1,8 @@
 import css from './Layout.module.css';
 import MainMenu from '../mainMenu/MainMenu';
 import Main from '../mainTag/Main';
-import { BasketContextProvider } from '../basket/BasketContext';
-import { ThemeContextProvider } from '../themes/themeContext';
+import { BasketContextProvider } from '../../context/basketContext';
+import { ThemeContextProvider } from '../../context/themeContext';
 
 const Layout = ({ children }) => {
   return (

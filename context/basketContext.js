@@ -84,9 +84,7 @@ export const BasketContextProvider = ({ children }) => {
 
 const useBasket = () => {
   const context = useContext(BasketContext);
-  if (context === undefined) {
-    throw new Error('useBasket must be used within BasketContext');
-  }
+
   return context;
 };
 

@@ -1,5 +1,5 @@
 import css from './BasketCard.module.css';
-import useBasket from './BasketContext';
+import useBasket from '../../context/basketContext';
 
 const BasketCard = () => {
   const {

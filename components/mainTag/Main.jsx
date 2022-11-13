@@ -1,5 +1,5 @@
 import css from './Main.module.css';
-import useTheme from '../themes/themeContext';
+import useTheme from '../../context/themeContext';
 
 const Main = ({ children }) => {
   const { theme } = useTheme();
