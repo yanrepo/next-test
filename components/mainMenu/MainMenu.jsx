@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import css from './MainMenu.module.css';
+import SwitchTheme from './SwitchTheme';
 
 const MainMenu = () => {
   return (
@@ -16,6 +17,7 @@ const MainMenu = () => {
       <Link href={'/basket'}>
         <a className={css.basketLink}>basket</a>
       </Link>
+      <SwitchTheme />
     </div>
   );
 };

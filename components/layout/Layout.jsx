@@ -1,15 +1,19 @@
 import css from './Layout.module.css';
 import MainMenu from '../mainMenu/MainMenu';
+import Main from '../mainTag/Main';
 import { BasketContextProvider } from '../basket/BasketContext';
+import { ThemeContextProvider } from '../themes/themeContext';
 
 const Layout = ({ children }) => {
   return (
-    <div className={css.layout}>
-      <MainMenu />
-      <BasketContextProvider>
-        <div className={css.main}>{children}</div>
-      </BasketContextProvider>
-    </div>
+    <BasketContextProvider>
+      <ThemeContextProvider>
+        <div className={css.layout}>
+          <MainMenu />
+          <Main>{children}</Main>
+        </div>
+      </ThemeContextProvider>
+    </BasketContextProvider>
   );
 };
 

@@ -1,25 +1,13 @@
 .layout {
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   justify-content: flex-start;
 }
-@media only screen and (orientation: portrait) {
-  .layout {
-    flex-flow: column;
-  }
-}
 
-.main {
-  padding: 0.5rem;
-  width: 100%;
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-}
 @media only screen and (orientation: landscape) {
-  .main {
-    margin-left: 8rem;
+  .layout {
+    flex-flow: row;
   }
 }
