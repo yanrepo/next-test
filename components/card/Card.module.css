@@ -27,3 +27,11 @@
   color: inherit;
   text-decoration: none;
 }
+
+.unsplash {
+  padding-bottom: 1rem;
+  color: inherit;
+  text-align: end;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: smaller;
+}

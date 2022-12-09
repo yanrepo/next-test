@@ -19,6 +19,19 @@ const Card = ({ i }) => {
           />
         </a>
       </Link>
+      <Link
+        href={
+          i.type === 'food'
+            ? 'https://unsplash.com/photos/oXULSch338E'
+            : 'https://unsplash.com/photos/YY_BLeDfSSU'
+        }
+      >
+        <a className={css.unsplash}>
+          {i.type === 'food'
+            ? 'Photo by Alexandra Tran @ unsplash'
+            : 'Photo by Daniel Jankovic @ unsplash'}
+        </a>
+      </Link>
       <h5 className={css.cardTitle}>
         {i.title} - ${i.price}
       </h5>
