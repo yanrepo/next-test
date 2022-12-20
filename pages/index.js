@@ -1,7 +1,9 @@
+import Timer from '../components/timer/Timer';
+
 export default function Home() {
   return (
     <div className="home">
-      <h1>take a break</h1>
+      <Timer />
     </div>
   );
 }

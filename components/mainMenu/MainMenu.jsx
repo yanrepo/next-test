@@ -5,17 +5,17 @@ import SwitchTheme from './SwitchTheme';
 const MainMenu = () => {
   return (
     <div className={css.conteiner}>
-      <Link href={'/'}>
-        <a className={css.aLink}>home</a>
+      <Link className={css.aLink} href={'/'}>
+        home
       </Link>
-      <Link href={'/food'}>
-        <a className={css.aLink}>food</a>
+      <Link className={css.aLink} href={'/food'}>
+        food
       </Link>
-      <Link href={'/drinks'}>
-        <a className={css.aLink}>drinks</a>
+      <Link className={css.aLink} href={'/drinks'}>
+        drinks
       </Link>
-      <Link href={'/basket'}>
-        <a className={css.basketLink}>basket</a>
+      <Link className={css.basketLink} href={'/basket'}>
+        basket
       </Link>
       <SwitchTheme />
     </div>

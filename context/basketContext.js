@@ -59,7 +59,7 @@ export const BasketContextProvider = ({ children }) => {
   };
 
   const updateTotal = (added) => {
-    const total = 0;
+    let total = 0;
     added.map(
       (product) => (total += product.price * product.amount)
     );

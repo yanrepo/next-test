@@ -1,6 +1,6 @@
 .box {
   padding: 3rem;
-  min-width: 50%;
+  height: fit-content;
   border: 2px solid var(--orange);
   border-radius: 1rem;
 }
