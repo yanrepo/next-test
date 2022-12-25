@@ -1,12 +1,10 @@
 .box {
   padding: 3rem;
+  width: 100%;
   height: fit-content;
-  border: 2px solid var(--orange);
-  border-radius: 1rem;
 }
 
-.h1 {
-  margin-top: 0;
+.title {
   text-align: center;
 }
 

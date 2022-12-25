@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/legacy/image';
 import imgFood from '../../public/images/alexandra-tran-unsplash.png';
 import imgDrinks from '../../public/images/daniel-jankovic-unsplash.png';
-import AddRemoveButton from './button/AddRemoveButton';
+import AddRemoveButton from './AddRemoveButton';
 
 const Card = ({ i }) => {
   return (

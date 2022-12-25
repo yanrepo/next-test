@@ -1,3 +1,5 @@
+'use client';
+
 import css from './Timer.module.css';
 import { useEffect, useState } from 'react';
 

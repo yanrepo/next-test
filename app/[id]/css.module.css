@@ -1,0 +1,30 @@
+.box {
+  width: 500px;
+  display: flex;
+  flex-flow: column;
+}
+
+.title {
+  margin: 0.5rem 0 0.5rem 0;
+  font-size: 1.15rem;
+  font-weight: bold;
+  border-bottom: 0.15rem dotted #00000080;
+  word-break: break-all;
+}
+
+.description {
+  padding: 1rem;
+  width: 100%;
+}
+
+.text {
+  word-break: break-all;
+}
+
+.unsplash {
+  padding-bottom: 0.5rem;
+  color: inherit;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: smaller;
+  text-align: right;
+}

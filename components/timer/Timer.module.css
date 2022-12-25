@@ -1,14 +1,15 @@
 .box {
-  padding: 3rem 0 3rem 0;
   display: flex;
   flex-flow: column;
   align-items: center;
+  background-color: rgba(240, 255, 255, 0.555);
+  border: 0;
+  border-radius: 15px;
 }
 
 .header {
-  padding: 3rem 0 3rem 0;
-  font-size: 2rem;
-  font-weight: 800;
+  padding: 1.5rem 0 1rem 0;
+  font-size: 1.5rem;
 }
 
 .time {

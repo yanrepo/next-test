@@ -1,14 +1,11 @@
+'use client';
+
 import css from './BasketCard.module.css';
-import useBasket from '../../context/basketContext';
+import useBasket from './basketContext';
 
 const BasketCard = () => {
-  const {
-    total,
-    products,
-    removeFromBasket,
-    increament,
-    decreament,
-  } = useBasket();
+  const { total, products, removeFromBasket, increament, decreament } =
+    useBasket();
 
   const inc = (e) => {
     e.preventDefault();
@@ -21,7 +18,7 @@ const BasketCard = () => {
 
   return (
     <div className={css.box}>
-      <h1 className={css.h1}>Amount: ${total}</h1>
+      <h2 className={css.title}>the total amount: ${total}</h2>
       <ul className={css.ul}>
         {products.map((i) => (
           <li className={css.li} key={i.id}>

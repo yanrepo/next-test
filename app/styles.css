@@ -1,0 +1,47 @@
+:root {
+  --white: #ffffff;
+  --black: #241f31;
+  --blue: #1c71d8;
+  --green: #57e389;
+  --orange: #e66100;
+  --red: #e70410;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.05rem;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+* {
+  box-sizing: border-box;
+}
+
+.card-box {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(10rem, 22rem));
+}
+
+main {
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+@media only screen and (orientation: landscape) {
+  body {
+    flex-flow: row;
+  }
+
+  main {
+    margin-left: 8rem;
+  }
+}

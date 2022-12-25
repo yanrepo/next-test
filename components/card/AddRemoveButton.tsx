@@ -1,9 +1,10 @@
-import useBasket from '../../../context/basketContext';
+'use client';
+
+import useBasket from '../basket/basketContext';
 import { useState, useEffect } from 'react';
 
 const AddRemoveButton = ({ i }) => {
-  const { products, addCardToBasket, removeFromBasket } =
-    useBasket();
+  const { products, addCardToBasket, removeFromBasket } = useBasket();
   const [state, setState] = useState(false);
 
   const handleClick = (e) => {
@@ -19,7 +20,7 @@ const AddRemoveButton = ({ i }) => {
 
   return (
     <button
-      style={{ height: '2rem' }}
+      style={{ height: '2rem', width: '100%' }}
       name={i.id}
       onClick={handleClick}
     >

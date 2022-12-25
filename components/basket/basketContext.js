@@ -60,9 +60,7 @@ export const BasketContextProvider = ({ children }) => {
 
   const updateTotal = (added) => {
     let total = 0;
-    added.map(
-      (product) => (total += product.price * product.amount)
-    );
+    added.map((product) => (total += product.price * product.amount));
     dispatch({ type: 'TOTAL', payload: { total } });
   };
 
@@ -76,9 +74,7 @@ export const BasketContextProvider = ({ children }) => {
   };
 
   return (
-    <BasketContext.Provider value={value}>
-      {children}
-    </BasketContext.Provider>
+    <BasketContext.Provider value={value}>{children}</BasketContext.Provider>
   );
 };
 
