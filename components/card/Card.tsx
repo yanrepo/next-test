@@ -12,8 +12,8 @@ const Card = ({ i }) => {
         <Image
           src={i.type === 'food' ? imgFood : imgDrinks}
           layout="intrinsic"
-          width={500}
-          height={500}
+          width={640}
+          height={640}
           alt="image"
         />
       </Link>

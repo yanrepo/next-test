@@ -1,6 +1,6 @@
 import supabase from '../../supabase';
 import css from './css.module.css';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import imgFood from '../../public/images/alexandra-tran-unsplash.png';
 import imgDrinks from '../../public/images/daniel-jankovic-unsplash.png';
@@ -12,26 +12,14 @@ export default async function Item({ params }) {
   } = await supabase.from('food').select('*').eq('id', params.id);
 
   return (
-    <>
+    <div className={css.outerbox}>
       <div className={css.box}>
         <Image
           src={item.type === 'food' ? imgFood : imgDrinks}
-          width={500}
-          height={500}
+          width={640}
+          height={640}
           alt="image"
         />
-        <Link
-          className={css.unsplash}
-          href={
-            item.type === 'food'
-              ? 'https://unsplash.com/photos/oXULSch338E'
-              : 'https://unsplash.com/photos/YY_BLeDfSSU'
-          }
-        >
-          {item.type === 'food'
-            ? 'Photo by Alexandra Tran @ unsplash'
-            : 'Photo by Daniel Jankovic @ unsplash'}
-        </Link>
         <AddRemoveButton i={item} />
         <div className={css.description}>
           <h5 className={css.title}>
@@ -40,6 +28,18 @@ export default async function Item({ params }) {
           <p className={css.text}>{item.text}</p>
         </div>
       </div>
-    </>
+      <Link
+        className={css.unsplash}
+        href={
+          item.type === 'food'
+            ? 'https://unsplash.com/photos/oXULSch338E'
+            : 'https://unsplash.com/photos/YY_BLeDfSSU'
+        }
+      >
+        {item.type === 'food'
+          ? 'Photo by Alexandra Tran @ unsplash'
+          : 'Photo by Daniel Jankovic @ unsplash'}
+      </Link>
+    </div>
   );
 }

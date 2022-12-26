@@ -1,7 +1,13 @@
 .box {
-  width: 500px;
+  min-width: 16rem;
+  max-width: 32rem;
   display: flex;
   flex-flow: column;
+}
+
+.outerbox {
+  display: flex;
+  flex-flow: row;
 }
 
 .title {
@@ -22,9 +28,8 @@
 }
 
 .unsplash {
-  padding-bottom: 0.5rem;
-  color: inherit;
+  padding: 0.3rem 0 0 0.3rem;
   font-family: 'Courier New', Courier, monospace;
-  font-size: smaller;
-  text-align: right;
+  font-size: small;
+  writing-mode: vertical-lr;
 }
