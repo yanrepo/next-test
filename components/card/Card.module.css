@@ -25,6 +25,12 @@
 .a {
   color: inherit;
   text-decoration: none;
+  position: relative;
+}
+.img {
+  display: block;
+  height: auto;
+  width: 100%;
 }
 
 .unsplash {

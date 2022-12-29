@@ -1,6 +1,6 @@
 import supabase from '../../supabase';
 import css from './css.module.css';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import imgFood from '../../public/images/alexandra-tran-unsplash.png';
 import imgDrinks from '../../public/images/daniel-jankovic-unsplash.png';
@@ -16,9 +16,9 @@ export default async function Item({ params }) {
       <div className={css.box}>
         <Image
           src={item.type === 'food' ? imgFood : imgDrinks}
-          width={640}
-          height={640}
+          className={css.img}
           alt="image"
+          placeholder="blur"
         />
         <AddRemoveButton i={item} />
         <div className={css.description}>

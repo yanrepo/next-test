@@ -1,6 +1,6 @@
 import css from './Card.module.css';
 import Link from 'next/link';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import imgFood from '../../public/images/alexandra-tran-unsplash.png';
 import imgDrinks from '../../public/images/daniel-jankovic-unsplash.png';
 import AddRemoveButton from './AddRemoveButton';
@@ -10,11 +10,10 @@ const Card = ({ i }) => {
     <div className={css.card}>
       <Link className={css.a} href={`/${i.id}`}>
         <Image
+          className={css.img}
           src={i.type === 'food' ? imgFood : imgDrinks}
-          layout="intrinsic"
-          width={640}
-          height={640}
           alt="image"
+          placeholder="blur"
         />
       </Link>
       <Link
