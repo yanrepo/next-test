@@ -22,11 +22,6 @@ body {
   box-sizing: border-box;
 }
 
-.card-box {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(10rem, 22rem));
-}
-
 main {
   padding: 0.5rem;
   width: 100%;
