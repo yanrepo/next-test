@@ -39,3 +39,9 @@
 .remove:hover {
   cursor: pointer;
 }
+
+.a {
+  color: var(--black);
+  font-size: xx-large;
+  font-weight: 500;
+}

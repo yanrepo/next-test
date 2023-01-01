@@ -2,6 +2,7 @@
 
 import css from './BasketCard.module.css';
 import useBasket from './basketContext';
+import Link from 'next/link';
 import Image from 'next/legacy/image';
 import imgFood from '../../public/images/alexandra-tran-unsplash.png';
 import imgDrinks from '../../public/images/daniel-jankovic-unsplash.png';
@@ -21,7 +22,12 @@ const BasketCard = () => {
 
   return (
     <div className={css.box}>
-      <h2 className={css.title}>the total amount: ${total}</h2>
+      {total === 0 && (
+        <Link className={css.a} href={'/food'}>
+          Get some Food!
+        </Link>
+      )}
+      {total > 0 && <h2 className={css.title}>the total amount: ${total}</h2>}
       {!products[0] ? null : (
         <ul className={css.ul}>
           {products.map((i) => (
